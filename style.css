@@ -3,6 +3,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+    }
+.navbar {
+    background: rgba(34, 34, 34, 0.85);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar a:hover {
+    color: #00bfff;
+} 
+#home { 
+    color: #3680c2;
+    text-align: center;
+}
+.tagline {
+    font-size: 1.2rem;
+    color: #01010e;
+    margin-bottom: 2rem;
+}
+.intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: left;
+}
+.intro h2 {
+    color: #1758dc;
+    margin-bottom: 1rem;
+}
+.developers-container {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.developer-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.developer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #007BFF; 
+}
+.profile-image img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.bio {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* BODY BACKGROUND */
@@ -310,4 +398,5 @@ button {
 button:hover {
     background: #9f4f3a;
 }
+
 
