@@ -1,0 +1,191 @@
+//TEMPERATURE CONVERTER
+function ComputeTemperature(){
+
+	let choice = parseFloat(prompt("Choose Convertor: \n1-Fahrenheit \n2-Celsius"));
+
+	if(isNaN(choice)){
+		alert("Invalid input!");
+		return;
+	}
+
+	if(choice !== 1 && choice !== 2){
+		alert("Invalid choice!");
+		return;
+	}
+
+	let temperature = parseFloat(prompt("Enter Temperature: "));
+    if(isNaN(temperature)){
+		alert("Invalid input!");
+		return;
+	}
+
+	let f;
+	let c;
+
+	switch(choice){
+		case 1:
+			c = (temperature - 32) * 5 / 9;
+			alert("Temperature in Celsius: " + c);
+			break;
+
+		case 2:
+			f = (temperature * 9 / 5) + 32;
+			alert("Temperature in Fahrenheit: " + f);
+			break;
+	}
+}
+
+
+//LONGER WORD
+function TheLongerWord(){
+	var word1 = prompt("Enter word 1: ").trim();
+	if (!isNaN(word1)) {
+   	 	alert("Invalid Input");
+		return;
+	} 
+	
+	var word2 = prompt("Enter word 2: ").trim();
+	if (!isNaN(word2)) {
+        alert("Invalid Input");
+		return;
+    }
+
+    if (word1.length > word2.length) {
+        alert(word1 + " is the longer word");
+    } else if (word2.length > word1.length) {
+        alert(word2 + " is the longer word");
+    } else {
+        alert("Both words have the same length");
+    }
+}
+
+
+//BASIC CALCULATOR
+function basicCalculator(){
+
+	let num1 = parseFloat(prompt("Enter first number: "));
+	if (isNaN(num1)){
+		alert("Invalid input");
+		return;
+	}
+
+	let num2 = parseFloat(prompt("Enter second number: "));
+	if (isNaN(num2)){
+		alert("Invalid input");
+		return;
+	}
+
+	let operator = prompt("Choose Operations: \nA(+) - Addition \nS(-) - Subtraction \nM(*) - Multiplication \nD(/) - Division")
+	.trim()
+	.toUpperCase();
+
+	if (!isNaN(operator)){
+		alert("Invalid input");
+		return;
+	}
+
+    switch(operator){
+        case 'A':
+        case '+':
+            alert(`Sum: ${num1+num2}`);
+            break;
+
+        case 'S':
+        case "-":
+            alert(`Difference: ${num1-num2}`);
+            break;
+
+        case 'M':
+        case "*":
+            alert(`Product: ${num1*num2}`);
+            break;
+
+        case 'D':
+        case "/":
+            if (num2 == 0){
+                alert("Error: Division by zero is not allowed.");
+            }else{
+                alert(`Division: ${num1/num2}`);
+            }
+            break;
+
+        default:
+            alert("Invalid Input");
+            break;
+    }
+}
+
+
+// BIRTHSTONE
+function showUserBirthStone(){
+    let birthmonth = prompt("Enter your birth month: ").toLowerCase().trim();
+    
+	switch(birthmonth){
+		case "january":
+			alert("Garnet");
+			break;
+		case "february":
+			alert("Amethyst");
+			break;
+		case "march":
+			alert("Aquamarine");
+			break;
+		case "april":
+			alert("Diamond");
+			break;
+		case "may":
+			alert("Emerald");
+			break;
+		case "june":
+			alert("Alexandrite & Pearl");
+			break;
+		case "july":
+			alert("Ruby");
+			break;
+		case "august":
+			alert("Peridot");
+			break;
+		case "september":
+			alert("Sapphire");
+			break;
+		case "october":
+			alert("Opal & Tourmaline");
+			break;
+		case "november":
+			alert("Citrine & Topaz");
+			break;
+		case "december":
+			alert("Blue Zircon, Turquoise & Tanzanite");
+			break;
+		default:
+			alert("Invalid Input");
+			break;
+	}
+}
+//ACCELERATION CALCULATOR
+function acceleration() {
+    let i = parseFloat(prompt("Enter initial velocity (m/s): "));
+    if (isNaN(i)) {
+        alert("Please enter valid numeric values.");
+        return;
+    }
+
+    let f = parseFloat(prompt("Enter final velocity (m/s): "));
+    if (isNaN(f)) {
+        alert("Please enter valid numeric values.");
+        return;
+    }
+
+    let c = parseFloat(prompt("Enter change in time (seconds): "));
+    if (isNaN(c)) {
+        alert("Please enter valid numeric values.");
+        return;
+    }
+    if (c <= 0) {
+        alert("Change in time must be greater than zero.");
+        return;
+    }
+
+    let result = (f - i) / c;
+    alert("Acceleration: " + result);
+}

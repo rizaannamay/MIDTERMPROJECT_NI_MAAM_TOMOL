@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #1e3741);
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+    text-align: right;
+    padding: 15px;
+    background: rgba(43, 41, 41, 0.5);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #4adfe7;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* HOME SECTION */
+#home h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    opacity: 0.8;
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* CARD STYLE (Functional Integration Box) */
+.card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+/* BUTTON CONTAINER */
+.portfolio-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BUTTON DESIGN */
+.portfolio-buttons button {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.portfolio-buttons button:hover {
+    background: #00f2fe;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* HIDDEN CLASS */
+.hidden {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+/* Poster Container */
+.poster-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Poster Image */
+.poster-container img {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.poster-container img:hover {
+    transform: scale(1.03);
+}
