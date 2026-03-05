@@ -189,3 +189,71 @@ function acceleration() {
     let result = (f - i) / c;
     alert("Acceleration: " + result);
 }
+
+//favorites
+function toggleLike(element) {
+    let heartImg = element.querySelector("img");
+
+    if (heartImg.dataset.liked === "true") {
+    heartImg.style.filter = "grayscale(100%)";
+    heartImg.dataset.liked = "false";
+    } else {
+    heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) brightness(94%) contrast(120%)";
+    heartImg.dataset.liked = "true"; // Added this line
+    }
+}
+
+function addComment(button) {
+    let commentInput = button.previousElementSibling;
+    let commentText = commentInput.value.trim();
+    if (commentText !== "") {
+    let commentList = button.parentElement.querySelector(".comments-list");
+    let newComment = document.createElement("li");
+    newComment.textContent = commentText;
+    commentList.appendChild(newComment);
+    commentInput.value = "";
+    }
+}
+
+function openPage(url) {
+    window.open(url, '_blank');
+    self.close();
+}
+
+
+(function() {
+    // Set initial grayscale & ensure dataset.liked is synced (false = grayscale)
+    function initHearts() {
+    document.querySelectorAll('.heart1 img').forEach(img => {
+        // If dataset.liked is 'false' (all of them), apply grayscale
+        if (img.dataset.liked === 'false') {
+        img.style.filter = 'grayscale(100%)';
+        }
+    });
+    }
+    
+    function watchLikes() {
+    const hearts = document.querySelectorAll('.heart1');
+    hearts.forEach(heart => {
+        heart.addEventListener('click', function(e) {
+        setTimeout(() => {
+            const img = heart.querySelector('img');
+            // if current filter is the invert string (liked) but dataset is not 'true', fix dataset
+            if (img.style.filter.includes('invert') && img.dataset.liked !== 'true') {
+            img.dataset.liked = 'true';
+            }
+            // if filter is grayscale (or empty) but dataset is 'true', fix dataset
+            else if ((img.style.filter.includes('grayscale') || img.style.filter === '') && img.dataset.liked === 'true') {
+            img.dataset.liked = 'false';
+            }
+        }, 10);
+        });
+    });
+    }
+
+    window.addEventListener('load', function() {
+    initHearts();
+    watchLikes();
+    });
+})();
+
