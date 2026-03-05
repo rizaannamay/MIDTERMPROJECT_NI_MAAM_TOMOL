@@ -201,12 +201,12 @@ transform:scale(1.03);
 }
 
 /* FAVORITES PAGE */
-.artwork-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:1.8rem;
-max-width:1400px;
-margin:0 auto;
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .artwork{
@@ -358,3 +358,4 @@ width:90%;
 padding:25px;
 }
 }
+
