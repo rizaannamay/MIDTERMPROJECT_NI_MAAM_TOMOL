@@ -1,27 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Favorites</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="favorites.css">
+    
 </head>
-
 <body>
+      <h2>⸻ MY FAVORITES MOMENT AS AN IT STUDENT ⸻</h2>
+  <div class="artwork-grid">
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="favorites.html">Favorites</a>
-</nav>
+    <!-- artwork 1 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 1</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Building My Tech Future.<br>Powered by Passion and Programming.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
 
-<section id="favorites">
+    <!-- artwork 2 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 2</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Technology changes fast – stay curious, stay ahead.<br> Your struggles in programming are shaping your success.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
 
-<h2>Favorites</h2>
+    <!-- artwork 3 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 3</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Master the basics today. <br>To lead innovation tomorrow.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
 
-<p>This is the favorites section.</p>
+    <!-- artwork 4 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 4</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="tostall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Behind every successful system is a persistent IT mind.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
 
-</section>
+    <!-- artwork 5 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 5</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Building My Tech Future.<br>Powered by Passion and Programming.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
 
+    <!-- artwork 6 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 6</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Technology changes fast – stay curious, stay ahead.<br> Your struggles in programming are shaping your success.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 7 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 7</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Master the basics today. <br>To lead innovation tomorrow.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 8 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 8</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="tostall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Behind every successful system is a persistent IT mind.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 9 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 9</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Building My Tech Future.<br>Powered by Passion and Programming.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 10 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 10</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Technology changes fast – stay curious, stay ahead.<br> Your struggles in programming are shaping your success.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 11 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 11</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="toomall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Master the basics today. <br>To lead innovation tomorrow.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+
+    <!-- artwork 12 -->
+    <div class="artwork">
+      <div class="image-wrapper">
+        <div class="placeholder-img">📸 placeholder 12</div>
+        <div class="heart1" onclick="toggleLike(this)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b5654b' width='32px' height='32px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" class="tostall" alt="heart" data-liked="false">
+        </div>
+      </div>
+      <p class="quote">Behind every successful system is a persistent IT mind.</p>
+      <div class="comments-section">
+        <p>Comment Section</p>
+        <ul class="comments-list"></ul>
+        <input type="text" class="comment-input" placeholder="Add a comment...">
+        <button onclick="addComment(this)">Post</button>
+      </div>
+    </div>
+  </div>
+
+  <script scr="favorites.js"></script>
 </body>
 </html>
