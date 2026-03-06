@@ -1,7 +1,11 @@
 //TEMPERATURE CONVERTER
 function ComputeTemperature(){
 
-	let choice = parseFloat(prompt("Choose Convertor: \n1-Fahrenheit \n2-Celsius"));
+	let choice =prompt("Choose Convertor: \n1-Fahrenheit \n2-Celsius");
+	if (choice === null) {
+		return;
+	}
+	choice = parseFloat(choice);
 
 	if(isNaN(choice)){
 		alert("Invalid input!");
@@ -13,7 +17,13 @@ function ComputeTemperature(){
 		return;
 	}
 
-	let temperature = parseFloat(prompt("Enter Temperature: "));
+	let temperature = prompt("Enter Temperature: ");
+
+	if (temperature === null) {
+		return;
+	}
+	temperature = parseFloat(temperature);
+
     if(isNaN(temperature)){
 		alert("Invalid input!");
 		return;
@@ -39,12 +49,20 @@ function ComputeTemperature(){
 //LONGER WORD
 function TheLongerWord(){
 	var word1 = prompt("Enter word 1: ").trim();
+	if (word1 === null) {
+		return;
+	}	
+
 	if (!isNaN(word1)) {
    	 	alert("Invalid Input");
 		return;
 	} 
 	
 	var word2 = prompt("Enter word 2: ").trim();
+	if (word2 === null) {
+		return;
+	}	
+
 	if (!isNaN(word2)) {
         alert("Invalid Input");
 		return;
@@ -63,21 +81,32 @@ function TheLongerWord(){
 //BASIC CALCULATOR
 function basicCalculator(){
 
-	let num1 = parseFloat(prompt("Enter first number: "));
+	let num1 =prompt("Enter first number: ").trim();
+	if(num1 === null){
+		return;
+	}	
+	num1 = parseFloat(num1);	
+
 	if (isNaN(num1)){
 		alert("Invalid input");
 		return;
 	}
 
-	let num2 = parseFloat(prompt("Enter second number: "));
+	let num2 = prompt("Enter second number: ").trim();
+	if(num2 === null){
+		return;
+	}	
+	num2 = parseFloat(num2);
+
 	if (isNaN(num2)){
 		alert("Invalid input");
 		return;
 	}
 
-	let operator = prompt("Choose Operations: \nA(+) - Addition \nS(-) - Subtraction \nM(*) - Multiplication \nD(/) - Division")
-	.trim()
-	.toUpperCase();
+	let operator = prompt("Choose Operations: \nA(+) - Addition \nS(-) - Subtraction \nM(*) - Multiplication \nD(/) - Division").trim().toUpperCase();
+	if(operator === null){
+		return;
+	}	
 
 	if (!isNaN(operator)){
 		alert("Invalid input");
@@ -119,6 +148,9 @@ function basicCalculator(){
 // BIRTHSTONE
 function showUserBirthStone(){
     let birthmonth = prompt("Enter your birth month: ").toLowerCase().trim();
+	if (birthmonth === null) {
+		return;
+	}	
     
 	switch(birthmonth){
 		case "january":
@@ -162,98 +194,89 @@ function showUserBirthStone(){
 			break;
 	}
 }
+
+
 //ACCELERATION CALCULATOR
 function acceleration() {
-    let i = parseFloat(prompt("Enter initial velocity (m/s): "));
-    if (isNaN(i)) {
+    let initial = prompt("Enter initial velocity (m/s): ");
+	if (initial === null) {
+		return;
+	}	
+	initial = parseFloat(initial);
+
+    if (isNaN(initial)) {
         alert("Please enter valid numeric values.");
         return;
     }
 
-    let f = parseFloat(prompt("Enter final velocity (m/s): "));
-    if (isNaN(f)) {
+    let final  = prompt("Enter final velocity (m/s): ");
+	if (final === null) {
+		return;
+	}	
+	final = parseFloat(final);
+
+    if (isNaN(final)) {
         alert("Please enter valid numeric values.");
         return;
     }
 
-    let c = parseFloat(prompt("Enter change in time (seconds): "));
-    if (isNaN(c)) {
+    let time = prompt("Enter change in time (seconds): ");
+	if (time === null) {
+		return;
+	}	
+	time = parseFloat(time);	
+
+    if (isNaN(time)) {
         alert("Please enter valid numeric values.");
         return;
     }
-    if (c <= 0) {
+
+    if (time <= 0) {
         alert("Change in time must be greater than zero.");
         return;
     }
 
-    let result = (f - i) / c;
+    let result = (final - initial) / time;
     alert("Acceleration: " + result);
 }
 
-//favorites
-function toggleLike(element) {
-    let heartImg = element.querySelector("img");
 
-    if (heartImg.dataset.liked === "true") {
-    heartImg.style.filter = "grayscale(100%)";
-    heartImg.dataset.liked = "false";
-    } else {
-    heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) brightness(94%) contrast(120%)";
-    heartImg.dataset.liked = "true"; // Added this line
-    }
+/* HEART TOGGLE */
+function toggleLike(element){
+
+element.classList.add("pop");
+
+setTimeout(()=>{
+element.classList.remove("pop");
+},200);
+
+if(element.textContent=="🤍"){
+element.textContent="❤️";
+}
+else{
+element.textContent="🤍";
 }
 
-function addComment(button) {
-    let commentInput = button.previousElementSibling;
-    let commentText = commentInput.value.trim();
-    if (commentText !== "") {
-    let commentList = button.parentElement.querySelector(".comments-list");
-    let newComment = document.createElement("li");
-    newComment.textContent = commentText;
-    commentList.appendChild(newComment);
-    commentInput.value = "";
-    }
 }
 
-function openPage(url) {
-    window.open(url, '_blank');
-    self.close();
+/* ADD COMMENT */
+function addComment(button){
+
+let commentInput=button.previousElementSibling;
+let text=commentInput.value.trim();
+
+if(text!=""){
+
+let list=button.parentElement.querySelector(".comments-list");
+
+let li=document.createElement("li");
+
+li.textContent=text;
+
+list.appendChild(li);
+
+commentInput.value="";
+
 }
 
-
-(function() {
-    // Set initial grayscale & ensure dataset.liked is synced (false = grayscale)
-    function initHearts() {
-    document.querySelectorAll('.heart1 img').forEach(img => {
-        // If dataset.liked is 'false' (all of them), apply grayscale
-        if (img.dataset.liked === 'false') {
-        img.style.filter = 'grayscale(100%)';
-        }
-    });
-    }
-    
-    function watchLikes() {
-    const hearts = document.querySelectorAll('.heart1');
-    hearts.forEach(heart => {
-        heart.addEventListener('click', function(e) {
-        setTimeout(() => {
-            const img = heart.querySelector('img');
-            // if current filter is the invert string (liked) but dataset is not 'true', fix dataset
-            if (img.style.filter.includes('invert') && img.dataset.liked !== 'true') {
-            img.dataset.liked = 'true';
-            }
-            // if filter is grayscale (or empty) but dataset is 'true', fix dataset
-            else if ((img.style.filter.includes('grayscale') || img.style.filter === '') && img.dataset.liked === 'true') {
-            img.dataset.liked = 'false';
-            }
-        }, 10);
-        });
-    });
-    }
-
-    window.addEventListener('load', function() {
-    initHearts();
-    watchLikes();
-    });
-})();
-
+}
